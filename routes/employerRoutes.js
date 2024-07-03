@@ -9,7 +9,7 @@ router.post("/register", registerEmployer);
 router.post("/login", loginEmployer);
 router.get("/profile", checkAuthEmployer ,profile);
 
-router.get("/get-profile/:id", getProfile);
+router.get("/get-profile/:id", checkAuthEmployer ,getProfile);
 router.put("/update-profile/:id", checkAuthEmployer, updateProfile);
 
 router.get("/get-all-employers", getEmployers);
